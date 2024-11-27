@@ -1,18 +1,11 @@
 void main() {
-  Animal cat = Cat("name", 1, 'orange');
-  print(cat.color); // orange
-}
-
-class Animal {
-  final String name;
-  final int age;
-  final String color;
-
-  Animal(this.name, this.age, this.color);
-}
-
-class Cat extends Animal {
-  final String color;
-
-  Cat(String name, int age, this.color) : super(name, age, color);
+  const number = 2;
+  switch (number) {
+    case 1:
+      print("number is 1");
+    case 2:
+      print("number is 2");
+    default:
+      print("number is not 1 or 2");
+  }
 }
