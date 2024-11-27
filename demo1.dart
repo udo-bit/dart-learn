@@ -1,10 +1,4 @@
 void main() {
-  var login = 'Manager1';
-  var nav = [
-    'Home',
-    'Furniture',
-    'Plants',
-    if (login case 'Manager') 'Inventory'
-  ];
-  print(nav);
+  var list = List<String>.from(['1']);
+  print(list);
 }
