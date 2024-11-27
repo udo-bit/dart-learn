@@ -1,8 +1,7 @@
 void main() {
-  var (a, b) = userInfo();
-  print('name: $a, age: $b');
-}
-
-(String name, int age) userInfo() {
-  return ('Tom', 20);
+  List<String?> row = ['user', null];
+  switch (row) {
+    case ['user', var name?]:
+      print('Hello, $name!');
+  }
 }
