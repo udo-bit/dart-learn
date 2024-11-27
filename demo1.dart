@@ -1,7 +1,12 @@
 void main() {
-  List<String?> row = ['user', null];
-  switch (row) {
-    case ['user', var name?]:
-      print('Hello, $name!');
-  }
+  var msg = say(
+    device: 'phone',
+    'Tom',
+    'hello',
+  );
+  print(msg);
+}
+
+String say(String from, String msg, {String? device}) {
+  return "hello $from say $msg by $device";
 }
