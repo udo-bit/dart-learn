@@ -1,12 +1,13 @@
 void main() {
-  var msg = say(
-    device: 'phone',
-    'Tom',
-    'hello',
-  );
-  print(msg);
+  print(Counter.c);
 }
 
-String say(String from, String msg, {String? device}) {
-  return "hello $from say $msg by $device";
+class Counter {
+  static bool compate(int a, int b) {
+    return a > b;
+  }
+
+  static int a = 1;
+  static int b = 2;
+  static bool c = compate(a, b);
 }
