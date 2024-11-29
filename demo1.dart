@@ -1,9 +1,12 @@
+import 'dart:convert';
 import 'dart:io';
-import 'dart:isolate';
 
-void main() {
-  var t1 = DateTime(2024, 11, 29);
-  var t2 = DateTime(1991, 10, 25);
-  var duration = t1.difference(t2);
-  print(duration.inDays / 365);
+void main() async {
+  var filePath = "tmp.log";
+  var file = File(filePath);
+  var stream = file.openRead();
+  var lines = stream.transform(utf8.decoder).transform(LineSplitter());
+  await for (var line in lines) {
+    print(line);
+  }
 }
