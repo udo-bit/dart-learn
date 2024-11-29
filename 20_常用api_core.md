@@ -101,6 +101,7 @@ var exedOut = someDigits.replaceAll(numbers, 'XX');
 // 也可以直接使用正则表达式对象
 assert(numbers.hasMatch(someDigits));
 
+// 遍历匹配到的结果
 for (final match in numbers.allMatches(someDigits)) {
   print(match.group(0)); // 15, then 20
 }
