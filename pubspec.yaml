@@ -1,0 +1,6 @@
+name: my_app
+
+environment:
+  sdk: "^3.4.3"
+dependencies:
+  js: ^0.7.1
