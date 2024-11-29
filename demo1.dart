@@ -1,12 +1,10 @@
 import 'dart:io';
 import 'dart:isolate';
 
-void main() async {
-  String content = await Isolate.run(() => getFileContent());
-  print(content);
-}
-
-String getFileContent() {
-  File file = new File('./demo1.dart');
-  return file.readAsStringSync();
+void main() {
+  var str = "1 to 10";
+  var numbers = RegExp(r"\d+");
+  for (final match in numbers.allMatches(str)) {
+    print(match.group(0));
+  }
 }
