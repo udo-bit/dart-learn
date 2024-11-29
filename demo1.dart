@@ -1,17 +1,12 @@
-void main() {
-  Guitar guitar = Guitar();
-  guitar.tuneInstrument();
+import 'dart:io';
+import 'dart:isolate';
+
+void main() async {
+  String content = await Isolate.run(() => getFileContent());
+  print(content);
 }
 
-interface class Tuner {
-  void tuneInstrument() {
-    print('Tuning the instrument');
-  }
-}
-
-class Guitar implements Tuner {
-  @override
-  void tuneInstrument() {
-    print('Tuning the guitar');
-  }
+String getFileContent() {
+  File file = new File('./demo1.dart');
+  return file.readAsStringSync();
 }
